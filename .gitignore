@@ -182,3 +182,16 @@ coverage/
 # temporary files
 tmp/
 temp/
+
+
+
+########
+node_modules
+.env
+dist
+.DS_Store
+.vscode
+
+client/.env
+server/.env
+server/.env.example

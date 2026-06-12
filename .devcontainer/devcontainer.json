@@ -1,0 +1,28 @@
+{
+  "name": "edu-content-crud",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "forwardPorts": [5000, 5173],
+  "portsAttributes": {
+    "5000": {
+      "label": "Express API",
+      "onAutoForward": "notify"
+    },
+    "5173": {
+      "label": "React Vite",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postCreateCommand": "if [ -f server/package.json ]; then cd server && npm install; fi && if [ -f client/package.json ]; then cd ../client && npm install; fi",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss"
+      ]
+    }
+  }
+}
